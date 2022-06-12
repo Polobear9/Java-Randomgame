@@ -22,30 +22,30 @@ public class Index {
 			
 			
 			System.out.println("Now you Try : " + ua.counter + " Times");
-			System.out.println("-----The Number of Computer is-------");
 			System.out.println("Tell me the answer");
 			int AN = sc.nextInt();
 			ua.UserAnswer = AN;
-
-			System.out.println("You Answer is : " + AN);
-			if(ua.UserAnswer == cn.Answer) {
-				System.out.println("correct!");
-			}else {
-				System.out.println("Try again");	
-				System.out.println("Life is " + (ua.life -1 ) + " left");
-					ua.counter += 1;
-					ua.life -= 1;
-			}
 			
 			if(AN > cn.Answer) {
 				System.out.println("The Number is Lower Then Your Answer");
 			}else {
 				System.out.println("The Number is higher Then Your Answer");
 			}
+
+			System.out.println("You Answer is : " + AN);
+			if(ua.UserAnswer == cn.Answer) {
+				System.out.println("correct!");
+				System.out.println("--------------------");
+			}else {
+				System.out.println("Try again");	
+				System.out.println("Life is " + (ua.life -1 ) + " left");
+					ua.counter += 1;
+					ua.life -= 1;
+				System.out.println("--------------------");
+			}
 		}
 		
 		System.out.println("welcome back!");
 		System.out.println("The CoumputerNumber is " + cn.Answer);
 	}
-
 }
